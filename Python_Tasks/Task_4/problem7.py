@@ -1,0 +1,10 @@
+# join with delimeter for given string
+def split_and_join(line):
+     words=line.split()
+     new='-'.join(words)
+     return new
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
