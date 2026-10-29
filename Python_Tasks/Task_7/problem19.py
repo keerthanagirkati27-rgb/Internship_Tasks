@@ -1,0 +1,17 @@
+
+def weightedUniformStrings(s, queries):
+    weights = set()
+    prev = ''
+    count = 0
+
+    for ch in s:
+        if ch == prev:
+            count += 1
+        else:
+            count = 1
+            prev = ch
+
+        weight = (ord(ch) - ord('a') + 1) * count
+        weights.add(weight)
+
+    return ["Yes" if q in weights else "No" for q in queries]
